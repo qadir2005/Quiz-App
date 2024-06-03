@@ -254,6 +254,7 @@ let finishBtn = document.querySelector("#finishbtn")
 let percentage = document.querySelector(".options")
 let actualPercentage = document.querySelector(".percentage")
 let totlQue = document.querySelector(".totalQuestion")
+btn.disabled = true;// Initially button disabled 
 // option values
 let option1 = document.querySelector("#options1")
 let option2 = document.querySelector("#options2")
@@ -275,19 +276,33 @@ let quizLoad = ()=>{
     option2.innerText = htmlQuiz[index]['2'];
     option3.innerText = htmlQuiz[index]["3"];
     option4.innerText = htmlQuiz[index]["4"];
+btn.disabled = true// Button disabled on each load 
     
 }
 let selectVlue = ()=>{
     inputs.forEach((input,index)=>{
         if(input.checked){
             checkedAnswers= index;
+
+        }
+        else{
         }
          
     })
 }
-
 quizLoad();
+// Radio btn check 
+inputs.forEach((input)=>{
+    input.addEventListener("change",()=>{
+        btn.disabled = false;
+        btn.style.background = "#052258"
+        btn.style.cursor = "pointer"
+    })
+})
+
+
 btn.addEventListener("click",()=>{
+    
     selectVlue()
     let correctVal = ()=>{
         let corrAns = htmlQuiz[index]["correct"];//return number value
