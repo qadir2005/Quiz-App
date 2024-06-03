@@ -35,17 +35,19 @@ body {
   font-weight: bold;
 }
 .percentage{
-  color:blue;
+  color: #10439f;
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  border: 2px solid blue;
+  border: 6px solid #10439f;
   display: none;
   justify-content: center;
   align-items: center;
   font-size: 22px;
   margin: auto;
   margin-top: 50px;
+  box-shadow: 7px 6px 41px #10439f;
+  font-weight: bold;
 }
 .options {
   margin-top: 50px;
@@ -66,9 +68,9 @@ body {
 }
 .submit button {
   padding: 8px 35px;
-  cursor: pointer;
+  cursor: not-allowed;
   font-weight: bold;
-  background-color: #10439f;
+  background-color: #2b3039;
   font-size: 16px;
   color: white;
   border: none;
@@ -76,9 +78,6 @@ body {
   transition: 0.3;
 }
 
-.submit button:hover{
-    background-color: #052258;
-}
 #finishbtn{
   background-color: green;
   display: none;
@@ -86,5 +85,23 @@ body {
 @media only screen and (max-width:520px) {
   .container{
     width: 70%;
+  }
+  .container .question{
+    font-size: 16px;
+  }
+  .submit button{
+    padding: 6px 21px;
+    font-size: 14px;
+  }
+  h1{
+    font-size: 24px;
+  }
+  .container p:first-of-type{
+    font-size: 13px;
+    margin-bottom: 10PX;
+  }
+  .options{
+    font-size: 12px;
+    margin-top: 30px;
   }
 }
